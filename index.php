@@ -1,5 +1,10 @@
 <?php
 require_once "DatabaseConnection.php";
+require_once "Statpacks.php";
+
+$dbConnection = new DatabaseConnection('collectorapp');
+$statpacks = new Statpacks();
+$cakes = $statpacks->fetchStats();
 
 ?>
 
@@ -27,7 +32,34 @@ require_once "DatabaseConnection.php";
 
 <body>
 
-<h1>Jake's Cakes and Such</h1>
+
+
+<section id="headerbox">
+  <header>
+        <div id="pflink">
+            <h1>Welcome to Jake's Cakes & Such Reviews</h1>
+        </div>
+  </header>
+</section>
+
+<section id="all-cakes">
+    <div class="cakebox">
+        <h2>Apple and Blackberry Pie</h2>
+        <p>Cake type: Pie</p>
+        <p>Source: Lochiniver Pies</p>
+        <p>Date: 07/08-2023</p>
+        <p id="ratingp">Rating: Great</p>
+        <p>Comment: a short sentence goes here</p>
+    </div>
+</section>
+
 
 </body>
 </html>
+
+<?php
+
+//echo '<pre>';
+//print_r($data2);
+//echo '</pre>';
+
