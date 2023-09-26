@@ -1,7 +1,6 @@
 <?php
 require_once "DatabaseConnection.php";
 
-
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,6 @@ require_once "DatabaseConnection.php";
 <body>
 
 <h1>Jake's Cakes and Such</h1>
-
 
 </body>
 </html>
