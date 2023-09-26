@@ -19,7 +19,7 @@ class Cake
      * @param string $rating
      * @param string $comment
      */
-    public function __construct(string $img_src, $pudding, string $type, string $source, string $date, string $rating, string $comment)
+    public function __construct(string $img_src, string $pudding, string $type, string $source, string $date, string $rating, string $comment)
     {
         $this->img_src = $img_src;
         $this->pudding = $pudding;
