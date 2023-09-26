@@ -19,7 +19,8 @@ class DatabaseConnection
         $username = 'root',
         $password = 'password',
         $options = null
-    ) {
+    )
+    {
         $this->db = $db;
         $this->host = $host;
         $this->username = $username;

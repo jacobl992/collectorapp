@@ -20,7 +20,8 @@ class Statpacks
     {
         $this->query = $this->pdo->prepare
         (
-            'SELECT `cake_data`.`name` AS "Pudding",
+            'SELECT `cake_data`.`img_src`,
+`cake_data`.`name` AS "Pudding",
 `types`.`type` AS "Type",
 `cake_data`.`source` AS "Source",
 `cake_data`.`date` AS "Date",
@@ -35,10 +36,10 @@ ON `cake_data`.`rating` = `ratings`.`id`;
         );
 
         $this->query->execute();
-        $statpacks =  $this->query->fetchAll();
+        $statpacks = $this->query->fetchAll();
         $cakes = [];
         foreach ($statpacks as $statpack) {
-            $cake = new Cake($statpack["Pudding"], $statpack["Type"],$statpack["Source"],$statpack["Date"],$statpack["Rating"],$statpack["Comment"]);
+            $cake = new Cake($statpack["img_src"], $statpack["Pudding"], $statpack["Type"], $statpack["Source"], $statpack["Date"], $statpack["Rating"], $statpack["Comment"]);
             $cakes[] = $cake;
         }
         return $cakes;
