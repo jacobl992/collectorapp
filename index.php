@@ -35,8 +35,8 @@ $cakes = $statpacks->fetchStats();
 
     <section id="headerbox">
         <header>
-            <div id="pflink">
-                <h1>Welcome to Jake's Cakes&Such</h1>
+            <div id="navbox">
+                <h1><span id="welcometo">Welcome to...    </span><span id="Jcakes">Jake's Cakes & Such</span></h1>
             </div>
         </header>
     </section>
@@ -46,13 +46,13 @@ $cakes = $statpacks->fetchStats();
         $cakebox = '';
         foreach ($cakes as $cake) {
             $cakebox .= '<div class="cakebox">'
-                . '<img src="' . $cake->getImg_src() . '" alt="' . $cake->getPudding() . '">'
                 . '<h3>' . $cake->getPudding() . '</h3>'
-                . '<p>Cake type: ' . $cake->getType() . '</p>'
-                . '<p>Source: ' . $cake->getSource() . '</p>'
-                . '<p>Date: ' . $cake->getDate() . '</p>'
-                . '<p id="ratingp">Rating: ' . $cake->getRating() . '</p>'
-                . '<p>Comment: ' . $cake->getComment() . '</p>'
+                . '<img src="' . $cake->getImg_src() . '" alt="' . $cake->getPudding() . '" class="pudding-img">'
+                . '<p class="stat-p"><span class="cakestat">Cake type: </span>' . $cake->getType() . '</p>'
+                . '<p class="stat-p"><span class="cakestat">Source: </span>' . $cake->getSource() . '</p>'
+                . '<p class="stat-p"><span class="cakestat">Date: </span>' . $cake->getDate() . '</p>'
+                . '<p id="ratingp" class="stat-p"><span class="cakestat">Rating: </span>' . $cake->getRating() . '</p>'
+                . '<p class="stat-p"><span class="cakestat">Comment: </span>' . $cake->getComment() . '</p>'
                 . '</div>';
         }
         echo $cakebox;
