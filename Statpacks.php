@@ -13,7 +13,6 @@ class Statpacks
     {
         $this->dbConnection = new DatabaseConnection('collectorapp');
         $this->pdo = $this->dbConnection->getPDO();
-
     }
 
     public function fetchStats(): array
