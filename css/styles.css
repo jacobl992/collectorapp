@@ -33,6 +33,14 @@ h1 {
     font-size: 3vw;
 }
 
+.navlink {
+    margin-left: auto;
+    margin-top: 2vw;
+    margin-right: 2vw;
+    font-size: 1.5vw;
+    color: rgb(243, 185, 215);
+}
+
 .pudding-img {
     width: 50vw;
     height: auto;
@@ -96,6 +104,23 @@ h3 {
         margin-left: 2vw;
         margin-right: 2vw;
     }
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 3vw;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: solid rgb(255,196,54);
+
+}
+
+form {
+    margin: 2vw;
+
 }
 
 @media only screen and (min-width: 1000px) {

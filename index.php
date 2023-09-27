@@ -38,6 +38,8 @@ $cakes = $statpacks->fetchStats();
         <header>
             <div id="navbox">
                 <h1><span id="welcometo">Welcome to...    </span><span id="Jcakes">Jake's Cakes & Such</span></h1>
+                <a class="navlink" href="./addindex.php">Add Pudding</a>
+                <!-- button  -->
             </div>
         </header>
     </section>
