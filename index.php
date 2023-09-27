@@ -1,6 +1,7 @@
 <?php
 require_once "DatabaseConnection.php";
 require_once "Statpacks.php";
+require_once "functions.php";
 
 $dbConnection = new DatabaseConnection('collectorapp');
 $statpacks = new Statpacks();

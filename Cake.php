@@ -1,4 +1,5 @@
 <?php
+require_once "functions.php";
 
 class Cake
 {
@@ -72,7 +73,7 @@ class Cake
 
     public function getDate(): string
     {
-        return $this->date;
+        return formatDate($this->date);
     }
 
     public function setDate(string $date): void
