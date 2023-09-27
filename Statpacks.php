@@ -31,7 +31,8 @@ FROM `cake_data`
 LEFT JOIN `types`
 ON `cake_data`.`type` = `types`.`id`
 LEFT JOIN `ratings`
-ON `cake_data`.`rating` = `ratings`.`id`;
+ON `cake_data`.`rating` = `ratings`.`id`
+ORDER BY `cake_data`.`date` DESC;
 '
         );
 
