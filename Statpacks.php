@@ -45,4 +45,34 @@ ORDER BY `cake_data`.`date` DESC;
         return $cakes;
     }
 
+    public function fetchTypes(): array
+    {
+        $this->query = $this->pdo->prepare
+        (
+            'SELECT `id`, `type`
+FROM `types`
+ORDER BY `type`;
+'
+        );
+
+        $this->query->execute();
+        $types = $this->query->fetchAll();
+        return $types;
+    }
+
+    public function fetchRatings(): array
+    {
+        $this->query = $this->pdo->prepare
+        (
+            'SELECT `id`, `rating`
+FROM `ratings`
+ORDER BY `id`;
+'
+        );
+
+        $this->query->execute();
+        $ratings = $this->query->fetchAll();
+        return $ratings;
+    }
+
 }

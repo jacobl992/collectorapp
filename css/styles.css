@@ -3,7 +3,10 @@
 }
 
 body {
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: 'Martian Mono', "Comic Sans MS", sans-serif;
+}
+
+#indexbody {
     background-image: url("https://i.ibb.co/nCDNZzY/bg-img.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -11,26 +14,49 @@ body {
     background-size: cover;
 }
 
-h1 {
-    color: rgb(255,255,255);
-    margin-top: 1.2vw;
-    margin-bottom: 2.5vw;
+#addindexbody {
+    background-color: rgb(255, 255, 255);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
 }
 
 #navbox {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(0,0,0);
+    display: grid;
+    grid-template-columns: 12vw auto 12vw;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.welcome {
+    grid-column: 2;
+    justify-self: center;
 }
 
 #welcometo {
     font-family: cursive, sans-serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
+
 }
 
 #Jcakes {
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: 'Croissant One', "Comic Sans MS", sans-serif;
     font-size: 3vw;
+    line-height: 0;
+}
+
+.navlink {
+    grid-column: 3;
+    justify-self: center;
+    font-size: 2.5vw;
+    color: rgb(243, 185, 215);
+    margin: 1vw;
+    font-family: 'Mooli', "Comic Sans MS", sans-serif;
 }
 
 .pudding-img {
@@ -70,8 +96,57 @@ h3 {
     margin-bottom: 0.5vw;
 }
 
+.formsBox {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 3vw;
+    background-image: url("https://i.ibb.co/gmkHCH9/formbgV.jpg");
+    /*background-image: url("https://i.ibb.co/8MGbtG5/formbg2.jpg");*/
+    background-size: cover;
+    border: solid rgb(255, 196, 54);
+    font-family: Arial, serif;
+}
+
+form {
+    margin: 2vw;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5vw;
+}
+
+.inputs {
+    margin-bottom: 1vw;
+}
+
+#comment {
+    width: 64vw;
+    height: auto;
+}
+
+.submissionBox {
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vw;
+}
 
 @media only screen and (min-width: 700px) {
+    #welcometo {
+        font-size: 2vw;
+    }
+
+    #Jcakes {
+        font-size: 2.5vw;
+    }
+
+    .navlink {
+        font-size: 2vw;
+    }
+
     #all-cakes {
         display: flex;
         flex-wrap: wrap;
@@ -95,6 +170,16 @@ h3 {
         align-self: flex-start;
         margin-left: 2vw;
         margin-right: 2vw;
+    }
+
+    .formsBox {
+        width: 50vw;
+        margin-left: 25vw;
+        margin-right: 25vw;
+    }
+
+    #comment {
+        width: 46vw;
     }
 }
 
