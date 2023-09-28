@@ -49,7 +49,7 @@ $ratings = $statpacks->fetchRatings();
     </nav>
 </section>
 
-<section id="forms">
+<section class="formsBox">
 
     <form action="processaddindex.php" method="post">
         <label for="name">Pudding:</label>
