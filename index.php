@@ -26,7 +26,8 @@ $cakes = $statpacks->fetchStats();
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Martian+Mono&family=Mooli&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Martian+Mono&family=Mooli&display=swap"
+              rel="stylesheet">
 
         <link rel="icon" href="images/tabicon.png" sizes="192x192">
         <link rel="shortcut icon" href="images/tabicon.png">
@@ -41,7 +42,8 @@ $cakes = $statpacks->fetchStats();
     <section id="headerbox">
         <nav>
             <div id="navbox">
-                <div class="welcome"><span id="welcometo">Welcome to...    </span><span id="Jcakes">Jake's Cakes & Such</span></div>
+                <div class="welcome"><span id="welcometo">Welcome to...    </span><span
+                            id="Jcakes">Jake's Cakes & Such</span></div>
                 <a class="navlink" href="./addindex.php">Add Pudding</a>
                 <!-- button  -->
             </div>
