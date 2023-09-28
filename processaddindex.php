@@ -10,12 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $date = $_POST["date"];
     $rating = $_POST["rating"];
     $comment = $_POST["comment"];
-    $img_url = $_POST["img_url"];
+    $img_src = $_POST["img_src"];
 } else {
-    throw new
+    throw new InvalidArgumentException();
 }
 
-$sql = "INSERT INTO `cake_data` (`name`, `type`, `source`, `date`, `rating`, `comment`, `img_url`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO `cake_data` (`name`, `type`, `source`, `date`, `rating`, `comment`, `img_src`) VALUES (?, ?, ?, ?, ?, ?, ?)";
 $statement = $pdo->prepare($sql);
 
 // Bind parameters using bindParam method
@@ -25,21 +25,17 @@ $statement->bindParam(3, $source, PDO::PARAM_STR);
 $statement->bindParam(4, $date, PDO::PARAM_STR);
 $statement->bindParam(5, $rating, PDO::PARAM_INT);
 $statement->bindParam(6, $comment, PDO::PARAM_STR);
-$statement->bindParam(7, $img_url, PDO::PARAM_STR);
+$statement->bindParam(7, $img_src, PDO::PARAM_STR);
 
 // Execute the prepared statement
 if ($statement->execute()) {
     echo "Form data submitted successfully!";
+    echo '<p><a href="./index.php">Home</a></p>';
+    echo '<p><a href="./addindex.php">Add Another Pudding</a></p>';
 } else {
     echo "Error: " . $statement->errorInfo()[2]; // Display the error message
 }
 
-//$statement->bind_param("ssssiss", $name, $type, $source, $date, $rating, $comment, $image_url);
-//if ($statement->execute()) {
-//    // Successfully inserted into the database
-//    echo "Form data submitted successfully!";
-//} else {
-//    // Error handling
-//    echo "Error: ";
-//}
-//<!--header is redirect function-->
+
+//header("Location: index.php");
+//exit();
