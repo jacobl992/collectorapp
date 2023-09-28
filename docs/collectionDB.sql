@@ -40,7 +40,8 @@ VALUES
 (6, 'Pie'),
 (7, 'Rocky Road'),
 (8, 'Tiffin'),
-(9, 'Other');
+(9, 'Other'),
+(10,'Fondant');
 
 
 
@@ -62,12 +63,12 @@ INSERT INTO `cake_data` (`id`, `name`, `type`, `source`, `date`, `rating`, `comm
 VALUES
 (1, 'Apple and Blackberry Pie', 6, 'Lochinever Pies', '2023-08-07', 4, 'Served warm, lovely filling, great pastry', 'https://i.ibb.co/hL9v0JC/Apple-and-Blackberry-Pie.jpg'),
 (2, 'Banana and Nutella Crepe', 5, 'Cote, Guildford', '2023-09-24', 4, 'Loads of nutella, caramelised banana, crunchy but a bit unecessary', 'https://i.ibb.co/0YXrqZH/Banana-and-Nutella-Crepe.jpg'),
-(3, 'Banana Cake', 2, 'The kitchen', '2023-10-07', 3, 'I was very proud of myself but I am biased', 'https://i.ibb.co/5L5X0KN/Banana-Cake.jpg'),
+(3, 'Banana Cake', 2, 'The kitchen', '2023-07-10', 3, 'I was very proud of myself but I am biased', 'https://i.ibb.co/5L5X0KN/Banana-Cake.jpg'),
 (4, 'Biscoff Cookie', 1, 'Pinkmans, Bristol', '2023-09-16', 2, 'Didnt set my world alight, very sugary', 'https://i.ibb.co/MZqxB6H/Biscoff-Cookie.jpg'),
 (5, 'Car Melted Tiffin', 8, 'Torridon Stores and Cafe, Scotland', '2023-08-08', 5, 'It was in the car for a bit in sunlight, the thick chocolate on top melted, it was amazing', 'https://i.ibb.co/dbD7v7N/Car-Melted-Tiffin.jpg'),
 (6, 'Chocolate Babka', 9, 'Wild oats, Bristol', '2023-09-16', 4, 'Light and tasty', 'https://i.ibb.co/jhcgVWh/Chocolate-Babka.jpg'),
-(7, 'Chocolate Fondant', 2, 'Deliahs, Lochiniver', '2023-08-06', 5, 'Doesnt get better than this', 'https://i.ibb.co/ckV0GvS/Chocolate-Fondant.jpg'),
-(8, 'Chocolate Fondant, Cote', 2, 'Cote, Guildford', '2023-09-24', 4, 'Very sweet, very nice', 'https://i.ibb.co/CWnRHcY/Chocolate-Fondant-Cote.jpg'),
+(7, 'Chocolate Fondant', 10, 'Deliahs, Lochiniver', '2023-08-06', 5, 'Doesnt get better than this', 'https://i.ibb.co/ckV0GvS/Chocolate-Fondant.jpg'),
+(8, 'Chocolate Fondant, Cote', 10, 'Cote, Guildford', '2023-09-24', 4, 'Very sweet, very nice', 'https://i.ibb.co/CWnRHcY/Chocolate-Fondant-Cote.jpg'),
 (9, 'Chocolate Hazelnut Doughnut', 4, 'Guildford Sustainable Fest', '2023-09-24', 4, 'Lovely light vegan sourdough donut', 'https://i.ibb.co/WgNyPmw/Chocolate-Hazelnut-Donut.jpg'),
 (10, 'Deluxe Hot Chocolate', 9, 'Cocoa Mountain, Dornoch', '2023-08-04', 5, 'Most incredible hot chocolate ever, (there was also a brilliant brownie)', 'https://i.ibb.co/XYL91mG/Deluxe-Hot-Chocolate.jpg'),
 (11, 'French Toast', 9, 'Burra, Bristol', '2023-09-02', 3, 'Pretty good, but not my favourite, no chocolate', 'https://i.ibb.co/k36Xdpx/French-Toast.jpg'),
