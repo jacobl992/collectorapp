@@ -7,7 +7,8 @@ require_once "functions.php";
 $dbConnection = new DatabaseConnection('collectorapp');
 $statpacks = new Statpacks();
 $cakes = $statpacks->fetchStats();
-
+$types = $statpacks->fetchTypes();
+$ratings = $statpacks->fetchRatings();
 ?>
 
 <!DOCTYPE html>
@@ -56,16 +57,13 @@ $cakes = $statpacks->fetchStats();
 
         <label for="type">Type:</label>
         <select id="type" name="type" class="inputs">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
+            <?php
+            $optionshtml = '';
+            foreach ($types as $type) {
+                $optionshtml .= '<option value = "' . $type['id'] . '" >' . $type['type'] . '</option >';
+            }
+            echo $optionshtml;
+            ?>
         </select><br>
 
         <label for="source">Source:</label>
@@ -76,11 +74,13 @@ $cakes = $statpacks->fetchStats();
 
         <label for="rating">Rating:</label>
         <select id="rating" name="rating" class="inputs">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php
+            $optionsHtmlRatings = '';
+            foreach ($ratings as $rating) {
+                $optionsHtmlRatings .= '<option value = "' . $rating['id'] . '" >' . $rating['rating'] . '</option >';
+            }
+            echo $optionsHtmlRatings;
+            ?>
         </select><br>
 
         <label for="comment">Comment:</label>
@@ -95,3 +95,6 @@ $cakes = $statpacks->fetchStats();
 
 </body>
 </html>
+
+<?php
+
