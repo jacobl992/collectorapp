@@ -74,5 +74,4 @@ ORDER BY `id`;
         $ratings = $this->query->fetchAll();
         return $ratings;
     }
-
 }

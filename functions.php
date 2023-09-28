@@ -37,5 +37,6 @@ function validURL(string $URL): bool
     if (!empty($URL) && !filter_var($URL, FILTER_VALIDATE_URL)) {
         return false;
     }
+
     return true;
 }
